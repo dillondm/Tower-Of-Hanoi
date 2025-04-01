@@ -1,6 +1,7 @@
 # Tower-Of-Hanoi
 
-Install Visual Studio Code here:
+Install Visual Studio Code here:  
+
 Download and install Visual Studio Code (VS Code) from here.
 Create a Project Folder:
 Create a new directory in your computer (any name of your choice)
