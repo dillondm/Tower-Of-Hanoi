@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+.TOH-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #333;
+}
+
+input, button {
+  padding: 8px;
+  margin: 10px;
+}
+.title{
+  font-style: italic;
+}
+
+.GameStage {
+  flex-grow: 1;
+  display: flex; 
+  align-items: flex-end;
+  padding: 10px;
+  margin-top: 20px; 
+  background: linear-gradient(to top, #0c6547, #6c5d54);
+  border-color: #e67e22;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#leaderboard {
+  width: 30%; 
+  background: #ffffff;
+  border: 2px solid #555;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.Stage {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  height: 320px;
+  width: 160px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 15px;
+  position: relative;
+}
+
+
+.Stage::before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  width: 10px;
+  height: 250px;
+  background-color: #444;
+  z-index: 0;
+  border-radius: 5px;
+}
+
+.Stage::after {
+  content: '';
+  position: absolute;
+  bottom: 5px; 
+  width: 220px; 
+  height: 10px; 
+  background-color: #444; 
+  border-radius: 5px;
+}
+
+
+
+.disk {
+  height: 20px;
+  margin: 5px auto;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: grab;
+  position:relative;
+  z-index: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.disk:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.game-rules-container {
+  width: 80%; 
+  background: #ffffff;
+  border: 2px solid #555;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-right: 40px;
+}
+
+.game-rules-container h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+
+.rules {
+  background-color: #f9f9f9;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.rules h2 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+
+.rules ul {
+  padding-left: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.rules li {
+  margin: 5px 0;
+  font-size: 1.2em;
+  color: #555;
+}
+.rules li::marker {
+  color: #ff5252; 
+  font-size: 1.5em; 
+}
+#MoveCounter,#Timer,#UndoButton,#ResetButton {
+  font-size: 18px; 
+  font-weight: bold;
+  color: #2c3e50;
+  background: #ecf0f1;
+  padding: 8px 16px; 
+  border-radius: 8px; 
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#MoveCounter:hover, #Timer:hover, #UndoButton:hover,#ResetButton:hover {
+  background-color: #d0d3d4;
+  transform: scale(1.05);
+}
+
+#StartGame {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto; 
+  will-change: transform;
+}
+
+#StartGame:disabled {
+  pointer-events: none;
+}
+
+#StartGame:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#StartGame:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+#DiskCount {
+  width: 80px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 2px solid #42a5f5;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#DiskCount:focus {
+  border-color: #66bb6a;
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.6);
+}

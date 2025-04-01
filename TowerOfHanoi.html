@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower of Hanoi</title>
+  <link rel="stylesheet" href="TOH_style.css">
+</head>
+<body>
+
+  <div class="TOH-container">
+    <div class="title"><h1>Tower of Hanoi</h1></div>
+
+    <div class="game-rules-container">
+      <div class="rules">
+        <h2>Game Rules</h2>
+        <ul>
+          <li>Only one disk can be moved at a time.</li>
+          <li>A disk can only be moved if it is the uppermost disk on a stack.</li>
+          <li>No larger disk may be placed on top of a smaller disk.</li>
+        </ul>
+      </div>
+      <br>
+      <label for="DiskCount">Number of Disks:</label>
+      <input type="number" id="DiskCount" min="3" max="7" value="3">
+      <button id="StartGame">Start Game</button>
+      <div id="MoveCounter">Moves: 0</div>
+      <div id="Timer">Time: 0s</div>
+      <br>
+      <button id="UndoButton">Undo Last Move</button>
+      <button id="ResetButton" onclick="reset()">Reset Game</button>
+      <!-- 
+      <label for="ChanegelDifficulty">Difficulty:</label>
+      <select id="Diff" name="difficulty">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+      </select>
+    -->
+    </div>
+    <br>
+    <div id="leaderboard">
+    </div>
+
+    <div class="GameStage">
+      <div id="tower1" class="Stage"></div>
+      <div id="tower2" class="Stage"></div>
+      <div id="tower3" class="Stage"></div>
+     
+    </div>
+    
+    
+  </div>
+
+</body>
+
+<script src="TOH.js"></script>
+</html>
